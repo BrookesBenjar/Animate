@@ -1,0 +1,198 @@
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  -webkit-animation: background 30s cubic-bezier(1,0,0,1) infinite;
+  animation: background 20s cubic-bezier(1,0,0,1) infinite;  
+}
+
+
+@-webkit-keyframes background {
+  0% { background-color: #f99; }
+  33% { background-color: #9f9; }  
+  67% { background-color: #99f; }
+  100% { background-color: #f99; }
+}
+
+@keyframes background {
+  0% { background-color: #f99; }
+  33% { background-color: #9f9; }  
+  67% { background-color: #99f; }
+  100% { background-color: #f99; }
+}
+div {
+  transition: all 0.5s ease;
+  background: inherit;
+  padding: 10px;
+}
+/*div:hover {
+  background: #b99292;
+  padding: 20px;*/
+}
+/*Arrows*/
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+/*animated buttons*/
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#box {
+    position:relative;
+    width: 100%;
+    height: 100%;
+    background:#CCC;
+}
+
+
+.contain {
+	position: absolute;
+  left: 80%;
+  top: 60%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+div#container {height:500px;width:500px;
+	background-color: #b99292;
+}
+
+div.a {
+width: 50px;
+height:50px;
+ background-color:red;
+position:fixed;
+    top:100px;
+    left:100px;
+}
+div.b {
+width: 50px;
+height:50px;
+ background-color:blue;
+position:fixed;
+    top:10px;
+    left:10px;
+}
+div.c {
+width: 50px;
+height:50px;
+ background-color:green;
+position:fixed;
+    top:200px;
+    left:100px;
+}
+
+#wrapper {
+    position: fixed;
+    top: 60%;
+    bottom: 0;
+    left: 80%;
+    height: 50px;
+    right: 50px;
+    margin: auto;
+    -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#ball {
+    height: 50px;
+    width: 50px;
+    background: black;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    animation: animate 1s linear 0s infinite alternate;}
+    #ball2 {
+    height: 70px;
+    width: 70px;
+    background: red;
+    border-radius: 50px;
+    position: absolute;
+    left: 0;
+    animation: animate2 1s linear 0s infinite alternate;
+}
+#ball3 {
+    height: 50px;
+    width: 50px;
+    background: blue;
+    border-radius: 50px;
+    position: absolute;
+    left: 0; 
+   animation: animate1 2s linear 0s infinite alternate;
+}
+#ball3.off {
+   animation-name: none;
+}
+
+@keyframes animate {
+    from { left: 100%; top: 0;}
+    to { left: 0; top: 100%;}
+}
+@keyframes animate1 {
+    from { left: 100%;}
+    to { left: 0;}
+}
+@keyframes animate2 {
+    from { top: 0;}
+    to { top: 100%;}
+}
